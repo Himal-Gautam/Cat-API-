@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (){
     const facts_container = document.querySelector(".facts-container")
+
     
      //url to fetch
     const URL = "https://cat-fact.herokuapp.com/facts"
@@ -14,16 +15,22 @@ document.addEventListener("DOMContentLoaded", function (){
     function display(ind){
         facts_container.innerHTML = 
         `
-        <div class="fact">
-            <h4>FACT ${ind}</h4>
-            <p>${allFacts[ind]}</p>
+        <div class="card">
+        <div class="card-header">
+            FACT ${ind}
         </div>
-        `
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+            <p>${allFacts[ind]}</p>
+            </blockquote>
+        </div>
+        </div>
+         `
     }
 
 
     //on clicking get facts 1>fetch the data &store in array 2>display 1st fact
-    document.querySelector("#get_fact").addEventListener("click", function (){
+    document.querySelector(".get_fact").addEventListener("click", function (){
         //fetching data
         fetch(URL)
         .then((response) => {
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (){
     })
 
     // showing previous fact on button click
-    document.querySelector("#prev").addEventListener("click", function (){
+    document.querySelector(".prev").addEventListener("click", function (){
         if(no>1)
            display(--no)
         else
@@ -50,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function (){
     })  
 
     //showing next fact on button click
-    document.querySelector("#next").addEventListener("click", function (){
+    document.querySelector(".next").addEventListener("click", function (){
         if(no<allFacts.length-1)
            display(++no)
         else
