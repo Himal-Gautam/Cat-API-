@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function (){
 
     //displays facts on page
     function display(ind){
+        
+         //adding background image
+        facts_container.style.backgroundImage = "url('https://www.teahub.io/photos/full/204-2043868_cute-cat-background-best-desktop-images-wallpaper-beautiful.jpg')"
         facts_container.innerHTML = 
         `
         <div class="card">
