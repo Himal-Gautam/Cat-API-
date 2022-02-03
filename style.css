@@ -19,9 +19,15 @@ html{
     display: flex;
     justify-content:center;
     padding:10px;
-    background-size:100%;
+    
 }
 
 .card{
     width: 100%;
+}
+
+.container{
+    height:100vh;
+    background-image: url('https://www.teahub.io/photos/full/204-2043868_cute-cat-background-best-desktop-images-wallpaper-beautiful.jpg')
+    background-size:100%;
 }
