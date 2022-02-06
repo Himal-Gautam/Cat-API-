@@ -1,4 +1,4 @@
-# Task of Async programming- Day -4 : Promise fetch - request info & request init.
+# Task of Async programming- Day -4 : 13/11/2021 - Saturday
 
 # Cat-API-
 Gets Cat's Fact from API 
